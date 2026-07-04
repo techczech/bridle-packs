@@ -1,0 +1,31 @@
+---
+type: table
+table_id: "22"
+paper_key: "olmo2"
+data_file: "olmo2-table-22.csv"
+caption: "Table 20 Details of OLMES benchmarks used in OLMo 2 evaluation, with standardized choices of dataset split, number of instances to use, along with total number if sampling was used. For multiple-choice tasks, when using the Cloze/Completion Formulation (CF), the 'metric' column specifies which normalization scheme to use. Following the OLMES standard, we evaluate each model using both the MCF (Multiple-Choice Formulation) and CF formulations, and the best performing one is used. For efficiency reasons, we limit MMLU and held-out multiple-choice evaluations to MCF only as all the relevant models strongly prefer that format for these tasks."
+---
+
+# Table 22
+
+## Caption
+Table 20 Details of OLMES benchmarks used in OLMo 2 evaluation, with standardized choices of dataset split, number of instances to use, along with total number if sampling was used. For multiple-choice tasks, when using the Cloze/Completion Formulation (CF), the 'metric' column specifies which normalization scheme to use. Following the OLMES standard, we evaluate each model using both the MCF (Multiple-Choice Formulation) and CF formulations, and the best performing one is used. For efficiency reasons, we limit MMLU and held-out multiple-choice evaluations to MCF only as all the relevant models strongly prefer that format for these tasks.
+
+## Data
+
+| task                      | split                 | #                     | inst (total)          | # shots               | metric                | reference                  |
+|---------------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|----------------------------|
+| Multiple-choice tasks     | Multiple-choice tasks | Multiple-choice tasks | Multiple-choice tasks | Multiple-choice tasks | Multiple-choice tasks | Multiple-choice tasks      |
+| ARC-Challenge (ARC_C)     | Test                  | 1172                  |                       | 5                     | pmi                   | (Clark et al., 2018)       |
+| BoolQ                     | Val                   | 1000 (3270)           |                       | 5                     | none                  | (Clark et al., 2019)       |
+| HellaSwag (HSwag)         | Val                   | 1000 (10042)          |                       | 5                     | char                  | (Zellers et al., 2019)     |
+| MMLU †                    | Test                  | 14042                 |                       | 5                     | char                  | (Hendrycks et al., 2021a)  |
+| WinoGrande (WinoG)        | Val                   | 1267                  |                       | 5                     | none                  | (Sakaguchi et al., 2020)   |
+| Generative tasks          | Generative tasks      | Generative tasks      | Generative tasks      | Generative tasks      | Generative tasks      | Generative tasks           |
+| DROP                      | Val                   | 1000 (9536)           |                       | 5                     | F1                    | (Dua et al., 2019)         |
+| Natural Questions (NatQs) | Val                   | 1000 (3610)           |                       | 5                     | F1                    | (Kwiatkowski et al., 2019) |
+| Held-out tasks            | Held-out tasks        | Held-out tasks        | Held-out tasks        | Held-out tasks        | Held-out tasks        | Held-out tasks             |
+| AGIEval English           | Test                  | 2646                  |                       | 1                     | MCF                   | (Zhong et al., 2024)       |
+| GSM8K                     | Test                  | 1319                  |                       | 8 (CoT)               | EM                    | (Cobbe et al., 2021)       |
+| MMLU-Pro                  | Test                  | 12032                 |                       | 5                     | MCF                   | (Wang et al., 2024)        |
+| TriviaQA                  | Val                   | 7993                  |                       | 5                     | F1                    | (Joshi et al., 2017)       |

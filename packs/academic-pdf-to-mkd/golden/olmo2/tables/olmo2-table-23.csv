@@ -1,0 +1,14 @@
+Category,Task,CoT,# shots,Chat,Multiturn ICL,Metric
+Instruct tasks,Instruct tasks,Instruct tasks,Instruct tasks,Instruct tasks,Instruct tasks,Instruct tasks
+Knowledge Recall,MMLU,✓,0,✓,✗,EM
+,PopQA,✗,15,✓,✓,EM
+,TruthfulQA,✗,6,✓,✗,MC2
+Reasoning,BigBenchHard,✓,3,✓,✓,EM
+,DROP,✗,3,✗,N/A,F1
+Math,GSM8K,✓,8,✓,✓,EM
+,MATH,✓,4,✓,✓,Flex EM
+Coding,HumanEval,✗,0,✓,N/A,Pass@10
+,HumanEval+,✗,0,✓,N/A,Pass@10
+Instruction Following,IFEval,✗,0,✓,N/A,Pass@1 (prompt; loose)
+,AlpacaEval 2,✗,0,✓,N/A,LC Winrate
+Safety,Tülu 3 Safety,✗,0,✓,N/A,Average ∗

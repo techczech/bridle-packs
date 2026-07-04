@@ -1,0 +1,7 @@
+Source.Source,Tokens.Tokens,50B.Source%,50B.Mix%,100B.Source%,100B.Mix%,300B.Source%,300B.Mix%
+Filtered DCLM,752B,3.23,47.2,6.85,50.2,20.78,51.9
+Decontam. FLAN,17.0B,50.0,16.6,100,16.7,200,11.3
+StackExchange Q&A,1.26B,100,2.45,200,2.47,400,1.68
+peS2o,58.6B,5.15,5.85,16.7,9.52,100,19.4
+Wikipedia/Wikibooks,3.7B,100,7.11,100,3.57,400,4.86
+Dolmino Math,10.7B,100,20.8,200,17.5,400,10.8
