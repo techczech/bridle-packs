@@ -4,3 +4,4 @@ node_modules/
 packs/*/envs/*/.venv/
 packs/*/envs/*/__pycache__/
 __pycache__/
+packs/*/golden/*/pages/

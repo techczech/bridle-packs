@@ -1,0 +1,3 @@
+Tokenizer,OLMES ( CF),OLMESGen,MMLU ( CF)
+OLMo 1 tokenizer,59.8,42.4,34.8
+OLMo 2 tokenizer,60.6,42.7,35.2

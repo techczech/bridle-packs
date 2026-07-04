@@ -1,0 +1,52 @@
+---
+type: table
+table_id: "01"
+paper_key: "olmo2"
+data_file: "olmo2-table-01.csv"
+caption: ""
+---
+
+# Table 01
+
+## Caption
+
+
+## Data
+
+| 1   | Introduction                                    | Introduction                                                     |   3 |
+|-----|-------------------------------------------------|------------------------------------------------------------------|-----|
+| 2   | OLMo2Family                                     | OLMo2Family                                                      |   4 |
+|     | 2.1                                             | Model Architecture . . . . . . . . . . . . . .                   |   4 |
+|     | 2.2                                             | Tokenizer . . . . . . . . . .                                    |   5 |
+|     | 2.3                                             | . . . . . . . . . . Base Model Training Recipe . . . . . . . . . |   6 |
+|     | 2.4                                             | Base Model Data . . . . . . . . . . . . .                        |   7 |
+|     | 2.5                                             | . . . Evaluation and Results . . . . . . . . . . . .             |   8 |
+| 3   | DeepDive: Pretraining Stability                 | DeepDive: Pretraining Stability                                  |  10 |
+|     | 3.1                                             | Repeated n-Grams . . . . . . . . . . . . . .                     |  12 |
+|     | 3.2                                             | Model Initialization . . . . . . . . . . . . . .                 |  13 |
+|     | 3.3                                             | Architecture Improvements . . . . . . . .                        |  15 |
+|     | 3.4                                             | . Hyperparameter Improvements . . . . . . .                      |  17 |
+| 4   | DeepDive: Mid-training Recipe                   | DeepDive: Mid-training Recipe                                    |  18 |
+|     | 4.1                                             | Learning rate annealing . . . . . . . . . . . .                  |  18 |
+|     | 4.2                                             | Data Curriculum: Dolmino Mix 1124 . . . . .                      |  19 |
+|     | 4.3                                             | Dolmino Mix 1124: High Quality Sources . . . .                   |  20 |
+|     | 4.4                                             | Dolmino Mix 1124: Math Mix .                                     |  23 |
+|     | 4.5                                             | . . . . . . . . Final Midtraining mix and Checkpoint Soups       |  25 |
+| 5   | DeepDive: Post-training Pipeline                | DeepDive: Post-training Pipeline                                 |  26 |
+| 6   | DeepDive: Infrastructure as a Research Catalyst | DeepDive: Infrastructure as a Research Catalyst                  |  30 |
+|     | 6.1 . .                                         | Clusters . . . . . . . . . . . . . . . . . . .                   |  31 |
+|     | 6.2                                             | Beaker . . . . . . . . . . . . . . . . . . . . .                 |  32 |
+|     | 6.3                                             | . Stability and Operations . . . . . . . . . . .                 |  33 |
+|     | 6.4                                             | Maximizing hardware utilization . . . . . . .                    |  33 |
+|     | 6.5                                             | Environmental Impact . . . . . . . . . . . . .                   |  35 |
+| A   | OLMo2Evaluation Framework                       | OLMo2Evaluation Framework                                        |  48 |
+|     | A.1                                             | Base Model Eval . . . . . . . . . . . . . . . .                  |  48 |
+|     | A.2                                             | Instruct Model Eval . . . . . . . . . . . . . .                  |  49 |
+| B   | OLMo21B                                         | OLMo21B                                                          |  49 |
+|     | B.1 DifficultieswithOLMo21B                     | . . . . . . . . . .                                              |  49 |
+| C   | Additional Instruct Details                     | Additional Instruct Details                                      |  52 |
+|     | C.1 Additional Hyperparameters                  | . . . . . . . .                                                  |  52 |
+|     | . C.2 Additional RLVR Learning Curves           | . . . . . .                                                      |  52 |
+|     | C.3 OLMo2-Instruct Preview Models               | . . . . . .                                                      |  52 |
+| D   | Additional Hyperparameters                      | Additional Hyperparameters                                       |  56 |
+| E   | Annealing Data Details                          | Annealing Data Details                                           |  58 |

@@ -1,0 +1,9 @@
+,OLMo1(0224),OLMo-0424,OLMo2
+Biases,None,None,None
+Activation,SwiGLU,SwiGLU,SwiGLU
+RoPE θ,1 ⋅ 10 4,1 ⋅ 10 4,5 ⋅ 10 5
+QKVNormalization,None,Clip to 8,QK-Norm
+LayerNorm,non-parametric,non-parametric,RMSNorm
+Layer NormApplied to,Inputs,Inputs,Outputs
+Z-Loss Weight,0,0,10 - 5
+WeightDecayonEmbeddings,Yes,Yes,No

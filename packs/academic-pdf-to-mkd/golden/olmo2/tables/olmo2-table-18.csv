@@ -1,0 +1,7 @@
+Epochs,L.R.,Loss,Avg. Perf.
+2,1e-5,sum,49.97
+3,4e-6,sum,49.76
+2,1e-5,sum,49.74
+2,1e-5,sum,49.59
+3,4e-6,mean,48.25
+2,2e-6,mean,48.18

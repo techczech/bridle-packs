@@ -1,0 +1,26 @@
+---
+type: table
+table_id: "29"
+paper_key: "olmo2"
+data_file: "olmo2-table-29.csv"
+caption: ""
+---
+
+# Table 29
+
+## Caption
+
+
+## Data
+
+| Dataset                 | Counts   | 7BDPO   | 13BDPO   |
+|-------------------------|----------|---------|----------|
+| SFT Reused              | 117,025  | ✓       | ✓        |
+| SFT IF                  | 65,792   | ✓       | ✓        |
+| WildChat Unused         | 84,105   | ✓       | ✓        |
+| WildChat Reused         | 17,703   | ✓       | ✓        |
+| WildChat IF             | 10,794   |         | ✓        |
+| Ultrafeedback (cleaned) | 60,816   | ✓       | ✓        |
+| DaringAnteater IF       | 1,618    | ✓       | ✓        |
+| Tülu 3 Personas IF      | 19,890   | ✓       | ✓        |
+| Total                   | 377,743  |         |          |

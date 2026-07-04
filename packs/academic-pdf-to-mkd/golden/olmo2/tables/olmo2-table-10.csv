@@ -1,0 +1,10 @@
+Learning Rate,Pretraining Stage,Mid-training Stage,"OLMES (CF, valid)"
+3 ⋅ 10 - 4,300B tokens,50B tokens,62.5
+6 ⋅ 10 - 4,300B tokens,50B tokens,63.9
+9 ⋅ 10 - 4,300B tokens,50B tokens,64.1
+12 ⋅ 10 - 4,300B tokens,50B tokens,63.6
+6 ⋅ 10 - 4,300B tokens,100B tokens,64.6
+9 ⋅ 10 - 4,300B tokens,100B tokens,64.5
+12 ⋅ 10 - 4,300B tokens,100B tokens,64.2
+3 ⋅ 10 - 4,2T tokens,100B high quality tokens,73.8
+6 ⋅ 10 - 4,2T tokens,100B high quality tokens,73.9

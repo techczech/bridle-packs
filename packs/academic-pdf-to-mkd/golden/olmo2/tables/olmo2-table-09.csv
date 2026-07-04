@@ -1,0 +1,3 @@
+OLMo-0424,OLMo2
+h ∶ = x + Attention ( LN ( x )),h ∶ = x + RMSNorm ( Attention ( x ))
+h out ∶ = h + MLP ( LN ( h )),h out ∶ = h + RMSNorm ( MLP ( h ))
