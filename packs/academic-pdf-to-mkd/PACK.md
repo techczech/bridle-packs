@@ -92,13 +92,13 @@ dependencies:
 assets:
   - id: docling-models
     description: Docling layout and table-structure models used by the tier-1 docling path.
-    size_bytes: 530579456
+    size_bytes: 358236338
     source:
       kind: hf
-      repo: ds4sd/docling-models
+      repo: docling-project/docling-models
     checksum:
       algorithm: sha256
-      value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      value: "ba922466453a2dff0a71bf97954fc392ffd3bb1686dbc89b071d2a6c52aefe10"
     consent_text: Download Docling model assets into the configured Hugging Face cache before first conversion.
   - id: mineru-models
     description: MinerU math-heavy extraction model weights; declared for future math engine support and not downloaded by the v0.3 live path.
