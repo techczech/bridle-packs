@@ -19,6 +19,22 @@ bun run validate
 
 The validator uses `@bridle/packs` and checks every `packs/*/PACK.md`.
 
+## Docling Evidence Run
+
+Dry-run the academic PDF pack without downloading models:
+
+```bash
+bun run evidence:docling -- --input /path/to/paper.pdf --dry-run
+```
+
+The live evidence run is intentionally explicit because it downloads Docling model assets into `HF_HOME`:
+
+```bash
+HF_HOME=~/local-models bun run evidence:docling -- --input /path/to/paper.pdf --allow-download
+```
+
+The output tree is written under `packs/academic-pdf-to-mkd/golden/<paper-id>/`.
+
 ## Licence
 
 Pack metadata and wrapper code in this repository are MIT licensed unless a pack says otherwise. Third-party engines keep their own licences. Encumbered dependencies and large model weights are declared as probes or managed assets; they are not committed to pack folders.
