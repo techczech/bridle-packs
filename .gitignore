@@ -1,8 +1,6 @@
 node_modules/
 *.log
 .DS_Store
-packs/*/golden/*
-!packs/*/golden/.gitkeep
 packs/*/envs/*/.venv/
 packs/*/envs/*/__pycache__/
 __pycache__/
