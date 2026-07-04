@@ -2,15 +2,7 @@ import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { basename, join } from "node:path";
-import {
-  createManagedAssetDownloadCapability,
-  createPackScriptCapability,
-  getManagedAssetCard,
-  getPackScriptAvailability,
-  runPackProbes,
-  type CoreScriptPack,
-} from "@bridle/core";
-import { loadPack, type LoadedScriptPack } from "@bridle/packs";
+import { importBridleCore, importBridlePacks, resolveBridleRoot } from "./bridle-runtime.ts";
 
 const PACK_RELATIVE = join("packs", "academic-pdf-to-mkd");
 const SCRIPT_ID = "extract-docling";
@@ -31,6 +23,8 @@ export interface EvidencePaths {
   dryRun: boolean;
   allowDownload: boolean;
 }
+
+export { resolveBridleRoot };
 
 export function paperIdFromPdf(path: string): string {
   const stem = basename(path).replace(/\.pdf$/i, "").toLowerCase().replace(/\s+/g, "-");
@@ -68,7 +62,7 @@ export function resolveEvidencePaths(repoRoot: string, args: EvidenceArgs): Evid
   };
 }
 
-function toCorePack(pack: LoadedScriptPack): CoreScriptPack {
+function toCorePack(pack: any): any {
   return {
     root: pack.root,
     name: pack.name,
@@ -77,7 +71,7 @@ function toCorePack(pack: LoadedScriptPack): CoreScriptPack {
       id: script.id,
       entry: script.entry,
       runtime: script.runtime,
-      argsSchema: script.argsSchema as CoreScriptPack["scripts"][number]["argsSchema"],
+      argsSchema: script.argsSchema,
       tier: script.tier,
       requiredProbes: script.requiredProbes,
       requiredAssets: script.requiredAssets,
@@ -114,14 +108,16 @@ async function firstPdf(dir: string): Promise<string | undefined> {
 
 async function main(): Promise<void> {
   const repoRoot = new URL("..", import.meta.url).pathname;
+  const bridleCore = await importBridleCore(repoRoot);
+  const bridlePacks = await importBridlePacks(repoRoot);
   const args = parseEvidenceArgs(Bun.argv.slice(2));
   if (!args.input) args.input = await defaultInputPdf();
   const paths = resolveEvidencePaths(repoRoot, args);
-  const pack = await loadPack(join(repoRoot, PACK_RELATIVE));
+  const pack = await bridlePacks.loadPack(join(repoRoot, PACK_RELATIVE));
   const corePack = toCorePack(pack);
-  const probeResults = await runPackProbes(corePack);
-  const availability = getPackScriptAvailability(corePack, probeResults);
-  const card = getManagedAssetCard(corePack, ASSET_ID);
+  const probeResults = await bridleCore.runPackProbes(corePack);
+  const availability = bridleCore.getPackScriptAvailability(corePack, probeResults);
+  const card = bridleCore.getManagedAssetCard(corePack, ASSET_ID);
   if (card.sizeBytes > MAX_DOCLING_BYTES) {
     throw new Error(`Docling asset exceeds approved size: ${card.sizeBytes} > ${MAX_DOCLING_BYTES}`);
   }
@@ -151,7 +147,7 @@ async function main(): Promise<void> {
     audit: (event: unknown) => { auditEvents.push(event); },
   };
 
-  const downloadCap = createManagedAssetDownloadCapability({
+  const downloadCap = bridleCore.createManagedAssetDownloadCapability({
     pack: corePack,
     assetId: ASSET_ID,
     maxBytes: MAX_DOCLING_BYTES,
@@ -160,7 +156,7 @@ async function main(): Promise<void> {
   if (downloadResult.isError) throw new Error(downloadResult.text);
 
   await mkdir(paths.outputDir, { recursive: true });
-  const scriptCap = createPackScriptCapability({ pack: corePack, scriptId: SCRIPT_ID });
+  const scriptCap = bridleCore.createPackScriptCapability({ pack: corePack, scriptId: SCRIPT_ID });
   const runResult = await scriptCap.execute({
     input_pdf: paths.inputPdf,
     output_dir: paths.outputDir,

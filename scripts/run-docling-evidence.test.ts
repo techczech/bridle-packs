@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { join } from "node:path";
-import { parseEvidenceArgs, paperIdFromPdf, resolveEvidencePaths } from "./run-docling-evidence.ts";
+import { parseEvidenceArgs, paperIdFromPdf, resolveBridleRoot, resolveEvidencePaths } from "./run-docling-evidence.ts";
 
 describe("run-docling-evidence helpers", () => {
   test("derives stable paper ids from PDF names", () => {
@@ -22,5 +22,9 @@ describe("run-docling-evidence helpers", () => {
   test("requires explicit download consent unless dry-run is requested", () => {
     expect(() => parseEvidenceArgs(["--input", "/tmp/paper.pdf"])).toThrow("--allow-download");
     expect(parseEvidenceArgs(["--input", "/tmp/paper.pdf", "--allow-download"]).allowDownload).toBe(true);
+  });
+
+  test("resolves Bridle from an explicit environment override", () => {
+    expect(resolveBridleRoot("/repo/bridle-packs", { BRIDLE_ROOT: "/tmp/bridle" })).toBe("/tmp/bridle");
   });
 });

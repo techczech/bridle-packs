@@ -9,13 +9,7 @@
     "evidence:docling": "bun run scripts/run-docling-evidence.ts"
   },
   "devDependencies": {
-    "@bridle/core": "file:../bridle/packages/core",
-    "@bridle/knowledge": "file:../bridle/packages/knowledge",
-    "@bridle/packs": "file:../bridle/packages/packs",
     "@types/bun": "^1.3.14",
     "typescript": "6.0.3"
-  },
-  "overrides": {
-    "@bridle/knowledge": "file:../bridle/packages/knowledge"
   }
 }

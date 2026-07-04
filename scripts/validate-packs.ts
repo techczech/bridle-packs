@@ -1,8 +1,9 @@
 import { readdir } from "node:fs/promises";
 import { join } from "node:path";
-import { loadPack } from "@bridle/packs";
+import { importBridlePacks } from "./bridle-runtime.ts";
 
 const root = new URL("..", import.meta.url).pathname;
+const { loadPack } = await importBridlePacks(root);
 const packsDir = join(root, "packs");
 const entries = await readdir(packsDir, { withFileTypes: true });
 
