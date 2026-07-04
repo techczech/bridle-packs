@@ -17,7 +17,11 @@ bun install
 bun run validate
 ```
 
-The validator uses `@bridle/packs` and checks every `packs/*/PACK.md`.
+The validator uses a local Bridle checkout and checks every `packs/*/PACK.md`. If this repository is not cloned beside `../bridle`, set `BRIDLE_ROOT`:
+
+```bash
+BRIDLE_ROOT=/path/to/bridle bun run validate
+```
 
 ## Docling Evidence Run
 
