@@ -1,0 +1,116 @@
+{
+  "tables": {
+    "tbl_bcf196d07adc6949": {
+      "frontmatter": {
+        "column_leaf_path_vectors": [
+          [
+            "Metrics",
+            "Count"
+          ],
+          [
+            "Metrics",
+            "Share"
+          ],
+          [
+            "Notes"
+          ]
+        ],
+        "column_leaf_paths": [
+          "Metrics / Count",
+          "Metrics / Share",
+          "Notes"
+        ],
+        "column_types": [
+          {
+            "name": "Metrics / Count",
+            "path": [
+              "Metrics",
+              "Count"
+            ],
+            "type": "integer"
+          },
+          {
+            "name": "Metrics / Share",
+            "path": [
+              "Metrics",
+              "Share"
+            ],
+            "type": "number"
+          },
+          {
+            "name": "Notes",
+            "path": [
+              "Notes"
+            ],
+            "type": "list"
+          }
+        ],
+        "id": "tbl_bcf196d07adc6949",
+        "provenance": {
+          "capture_method": "capture-html",
+          "captured_at": "2026-07-05T00:00:00Z",
+          "source": "golden/synthetic-complex/source.html"
+        },
+        "schema_fingerprint": "9d069790be2e2bcff75df1fedd2bde470f109cd13d476ccdc7c1d10fd7b0e1bd",
+        "tags": [
+          "archive",
+          "complex",
+          "golden"
+        ],
+        "title": "Synthetic Archive Table",
+        "type": "tableweaver.tablemodel"
+      },
+      "path": "tables/tbl_bcf196d07adc6949.md"
+    },
+    "tbl_simple_archive_metrics": {
+      "frontmatter": {
+        "column_leaf_path_vectors": [
+          [
+            "Metrics",
+            "Count"
+          ],
+          [
+            "Status"
+          ]
+        ],
+        "column_leaf_paths": [
+          "Metrics / Count",
+          "Status"
+        ],
+        "column_types": [
+          {
+            "name": "Metrics / Count",
+            "path": [
+              "Metrics",
+              "Count"
+            ],
+            "type": "integer"
+          },
+          {
+            "name": "Status",
+            "path": [
+              "Status"
+            ],
+            "type": "string"
+          }
+        ],
+        "id": "tbl_simple_archive_metrics",
+        "provenance": {
+          "capture_method": "manual-golden",
+          "captured_at": "2026-07-05T00:00:00Z",
+          "source": "golden/registry/simple-archive-metrics.json"
+        },
+        "schema_fingerprint": "677bea50c888dfb00ab5efb32fd8e863f53da4f1e18b2a0d5074be67dbb41a00",
+        "tags": [
+          "archive",
+          "golden",
+          "simple"
+        ],
+        "title": "Simple Archive Metrics",
+        "type": "tableweaver.tablemodel"
+      },
+      "path": "tables/tbl_simple_archive_metrics.md"
+    }
+  },
+  "version": 1
+}
