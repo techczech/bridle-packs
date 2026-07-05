@@ -6,7 +6,7 @@ source:
   skill_path: /Users/dominiklukes/gitrepos/06_apps-utilities/03_misc-utilities/bridle-packs/packs/tableweaver
   commit: 11e8d0f6a985b43ad14d16271d295b04eb90eab2
   design_path: packs/tableweaver/DESIGN.md
-  phase: 1
+  phase: 2
 scripts:
   - id: validate
     entry: scripts/pack-validate.py
@@ -86,6 +86,62 @@ scripts:
     tier: 1
     required_probes: []
     required_assets: []
+  - id: register
+    entry: scripts/pack-register.py
+    runtime: uv
+    args_schema:
+      type: object
+      required: [registry_dir]
+      properties:
+        registry_dir:
+          type: string
+        table_path:
+          type: string
+        table:
+          type: object
+        table_index:
+          type: integer
+        tags:
+          type: array
+          items:
+            type: string
+        output_path:
+          type: string
+    tier: 1
+    required_probes: []
+    required_assets: []
+  - id: query
+    entry: scripts/pack-query.py
+    runtime: uv
+    args_schema:
+      type: object
+      required: [registry_dir]
+      properties:
+        registry_dir:
+          type: string
+        filter:
+          type: object
+        output_path:
+          type: string
+    tier: 1
+    required_probes: []
+    required_assets: []
+  - id: analyse
+    entry: scripts/pack-analyse.py
+    runtime: uv
+    args_schema:
+      type: object
+      required: [registry_dir]
+      properties:
+        registry_dir:
+          type: string
+        column:
+          type: string
+        output_path:
+          type: string
+    tier: 1
+    required_probes: []
+    required_assets: []
 probes: []
 dependencies:
   - id: beautifulsoup4
@@ -107,6 +163,6 @@ dependencies:
 assets: []
 ---
 
-tableweaver Phase 1 provides offline, deterministic tier-1 scripts for the TableModel contract. The canonical representation is lossless rich JSON: hierarchical headers, multi-column row labels, merged-cell spans, and tagged rich cell values are preserved. Markdown, CSV, and TSV exports are derived views; CSV and TSV always emit an explicit loss report when structure is dropped.
+tableweaver Phase 2 provides offline, deterministic tier-1 scripts for the TableModel contract and Data Registry. The canonical representation is lossless rich JSON: hierarchical headers, multi-column row labels, merged-cell spans, and tagged rich cell values are preserved. Markdown, CSV, and TSV exports are derived views; CSV and TSV always emit an explicit loss report when structure is dropped. The registry stores every TableModel as an OKF-shaped document, keeps machine and human indexes, and supports cross-table query and deterministic corpus analysis.
 
-This pack contains no model provider, no model/API call, no API key, and no runtime network egress. Judgement lives in the host app's agent, outside the pack. Phase 2 registry scripts and app orchestration are intentionally out of scope.
+This pack contains no model provider, no model/API call, no API key, and no runtime network egress. Judgement lives in the host app's agent, outside the pack. App orchestration remains intentionally out of scope.
