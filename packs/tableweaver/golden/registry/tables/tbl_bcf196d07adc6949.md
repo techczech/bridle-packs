@@ -1,0 +1,321 @@
+---
+type: "tableweaver.tablemodel"
+title: "Synthetic Archive Table"
+id: "tbl_bcf196d07adc6949"
+provenance: {"capture_method": "capture-html", "captured_at": "2026-07-05T00:00:00Z", "source": "golden/synthetic-complex/source.html"}
+schema_fingerprint: "9d069790be2e2bcff75df1fedd2bde470f109cd13d476ccdc7c1d10fd7b0e1bd"
+tags: ["archive", "complex", "golden"]
+column_leaf_paths: ["Metrics / Count", "Metrics / Share", "Notes"]
+column_leaf_path_vectors: [["Metrics", "Count"], ["Metrics", "Share"], ["Notes"]]
+column_types: [{"name": "Metrics / Count", "path": ["Metrics", "Count"], "type": "integer"}, {"name": "Metrics / Share", "path": ["Metrics", "Share"], "type": "number"}, {"name": "Notes", "path": ["Notes"], "type": "list"}]
+---
+{
+  "columns": [
+    {
+      "cells": [
+        {
+          "col_start": 0,
+          "colspan": 2,
+          "id": "tbl_de90c8adf5c92179",
+          "row": 0,
+          "rowspan": 2,
+          "scope": "row_header",
+          "text": "Archive labels"
+        },
+        {
+          "col_start": 2,
+          "colspan": 2,
+          "id": "tbl_887a7a10bd2eb26d",
+          "row": 0,
+          "rowspan": 1,
+          "scope": "column_group",
+          "text": "Metrics"
+        },
+        {
+          "col_start": 4,
+          "colspan": 1,
+          "id": "tbl_f966a8de05f67927",
+          "row": 0,
+          "rowspan": 2,
+          "scope": "column_group",
+          "text": "Notes"
+        }
+      ],
+      "level": 0
+    },
+    {
+      "cells": [
+        {
+          "col_start": 0,
+          "colspan": 2,
+          "id": "tbl_de90c8adf5c92179",
+          "row": 0,
+          "rowspan": 2,
+          "scope": "row_header",
+          "text": "Archive labels"
+        },
+        {
+          "col_start": 2,
+          "colspan": 1,
+          "id": "tbl_f0e6389a9fbdbf3b",
+          "row": 1,
+          "rowspan": 1,
+          "scope": "column",
+          "text": "Count"
+        },
+        {
+          "col_start": 3,
+          "colspan": 1,
+          "id": "tbl_54d760423e3b7910",
+          "row": 1,
+          "rowspan": 1,
+          "scope": "column",
+          "text": "Share"
+        },
+        {
+          "col_start": 4,
+          "colspan": 1,
+          "id": "tbl_f966a8de05f67927",
+          "row": 0,
+          "rowspan": 2,
+          "scope": "column_group",
+          "text": "Notes"
+        }
+      ],
+      "level": 1
+    }
+  ],
+  "id": "tbl_bcf196d07adc6949",
+  "kind": "tablemodel",
+  "model_version": "1.0",
+  "provenance": {
+    "capture_method": "capture-html",
+    "captured_at": "2026-07-05T00:00:00Z",
+    "source": "golden/synthetic-complex/source.html"
+  },
+  "row_header_columns": [
+    {
+      "index": 0,
+      "path": [
+        "Archive labels"
+      ]
+    },
+    {
+      "index": 1,
+      "path": [
+        "Archive labels"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "cells": [
+        {
+          "data_type": "integer",
+          "kind": "scalar",
+          "value": 12
+        },
+        {
+          "data_type": "number",
+          "kind": "scalar",
+          "value": 0.6
+        },
+        {
+          "items": [
+            {
+              "data_type": "string",
+              "kind": "scalar",
+              "value": "catalogued"
+            },
+            {
+              "data_type": "string",
+              "kind": "scalar",
+              "value": "needs review"
+            }
+          ],
+          "kind": "list",
+          "ordered": false
+        }
+      ],
+      "index": 0,
+      "labels": [
+        {
+          "data_type": "string",
+          "kind": "scalar",
+          "value": "Collection A"
+        },
+        {
+          "data_type": "string",
+          "kind": "scalar",
+          "value": "Letters"
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "data_type": "string",
+          "kind": "scalar",
+          "value": "Merged metric pending"
+        },
+        null,
+        {
+          "kind": "table",
+          "table": {
+            "columns": [
+              {
+                "cells": [
+                  {
+                    "col_start": 0,
+                    "colspan": 1,
+                    "id": "tbl_21d13f67005f0f64",
+                    "row": 0,
+                    "rowspan": 1,
+                    "scope": "column",
+                    "text": "Flag"
+                  },
+                  {
+                    "col_start": 1,
+                    "colspan": 1,
+                    "id": "tbl_6051dbde97ee7358",
+                    "row": 0,
+                    "rowspan": 1,
+                    "scope": "column",
+                    "text": "Value"
+                  }
+                ],
+                "level": 0
+              }
+            ],
+            "id": "tbl_b301efff8b1e7ea3",
+            "kind": "tablemodel",
+            "model_version": "1.0",
+            "provenance": {
+              "capture_method": "capture-html",
+              "captured_at": "2026-07-05T00:00:00Z",
+              "source": "golden/synthetic-complex/source.html"
+            },
+            "row_header_columns": [],
+            "rows": [
+              {
+                "cells": [
+                  {
+                    "data_type": "string",
+                    "kind": "scalar",
+                    "value": "quality"
+                  },
+                  {
+                    "data_type": "string",
+                    "kind": "scalar",
+                    "value": "high"
+                  }
+                ],
+                "index": 0,
+                "labels": []
+              }
+            ],
+            "schema_fingerprint": {
+              "leaf_column_paths": [
+                [
+                  "Flag"
+                ],
+                [
+                  "Value"
+                ]
+              ],
+              "types": [
+                "string",
+                "string"
+              ],
+              "value": "e208c52451aeb158ee4c31d1af7d048693f006fc36aa10965780573e12d8697e"
+            },
+            "spans": [],
+            "title": "Table 1"
+          }
+        }
+      ],
+      "index": 1,
+      "labels": [
+        {
+          "data_type": "string",
+          "kind": "scalar",
+          "value": "Collection A"
+        },
+        {
+          "data_type": "string",
+          "kind": "scalar",
+          "value": "Reports"
+        }
+      ]
+    }
+  ],
+  "schema_fingerprint": {
+    "leaf_column_paths": [
+      [
+        "Metrics",
+        "Count"
+      ],
+      [
+        "Metrics",
+        "Share"
+      ],
+      [
+        "Notes"
+      ]
+    ],
+    "types": [
+      "integer",
+      "number",
+      "list"
+    ],
+    "value": "9d069790be2e2bcff75df1fedd2bde470f109cd13d476ccdc7c1d10fd7b0e1bd"
+  },
+  "spans": [
+    {
+      "col_start": 0,
+      "colspan": 2,
+      "id": "tbl_de90c8adf5c92179",
+      "row_start": 0,
+      "rowspan": 2,
+      "section": "header",
+      "text": "Archive labels"
+    },
+    {
+      "col_start": 2,
+      "colspan": 2,
+      "id": "tbl_887a7a10bd2eb26d",
+      "row_start": 0,
+      "rowspan": 1,
+      "section": "header",
+      "text": "Metrics"
+    },
+    {
+      "col_start": 4,
+      "colspan": 1,
+      "id": "tbl_f966a8de05f67927",
+      "row_start": 0,
+      "rowspan": 2,
+      "section": "header",
+      "text": "Notes"
+    },
+    {
+      "col_start": 0,
+      "colspan": 1,
+      "id": "tbl_7234162056ed62d4",
+      "row_start": 0,
+      "rowspan": 2,
+      "section": "body",
+      "text": "Collection A"
+    },
+    {
+      "col_start": 2,
+      "colspan": 2,
+      "id": "tbl_ec735aae79907057",
+      "row_start": 1,
+      "rowspan": 1,
+      "section": "body",
+      "text": "Merged metric pending"
+    }
+  ],
+  "title": "Synthetic Archive Table"
+}

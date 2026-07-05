@@ -1,0 +1,9 @@
+tableweaver includes an offline HTML table capture tool that reimplements the
+approach of Simon Willison's html-table-extractor from simonw/tools.
+
+Original project: https://github.com/simonw/tools
+Original licence: Apache License 2.0
+
+No source code was copied into this pack. The implementation here was authored
+for Bridle and extends the approach to preserve merged-cell spans, hierarchical
+headers, rich cell values, and nested tables in a lossless TableModel.

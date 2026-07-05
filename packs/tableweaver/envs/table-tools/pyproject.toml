@@ -1,0 +1,14 @@
+[project]
+name = "tableweaver-table-tools-pack-env"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4",
+    "jsonschema",
+    "lxml",
+    "pytest",
+]
+
+[tool.uv]
+package = false
+exclude-newer = "2026-06-28T00:00:00Z"
