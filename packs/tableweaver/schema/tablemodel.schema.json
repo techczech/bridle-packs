@@ -1,0 +1,360 @@
+{
+  "$defs": {
+    "cell_value": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "data_type": {
+              "enum": [
+                "string",
+                "integer",
+                "number",
+                "boolean",
+                "empty"
+              ]
+            },
+            "kind": {
+              "const": "scalar"
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "integer",
+                "boolean"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "value",
+            "data_type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "items": {
+              "items": {
+                "$ref": "#/$defs/cell_value"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "const": "list"
+            },
+            "ordered": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "ordered",
+            "items"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "blocks": {
+              "items": {
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "const": "rich_text"
+            }
+          },
+          "required": [
+            "kind",
+            "blocks"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "table"
+            },
+            "table": {
+              "$ref": "#"
+            }
+          },
+          "required": [
+            "kind",
+            "table"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "header_cell": {
+      "additionalProperties": false,
+      "properties": {
+        "col_start": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "colspan": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "path": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "row": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "rowspan": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "scope": {
+          "enum": [
+            "column",
+            "column_group",
+            "row_header"
+          ]
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "row",
+        "col_start",
+        "rowspan",
+        "colspan",
+        "scope"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://bridle.local/schema/tableweaver/tablemodel.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "columns": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cells": {
+            "items": {
+              "$ref": "#/$defs/header_cell"
+            },
+            "type": "array"
+          },
+          "level": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "level",
+          "cells"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "kind": {
+      "const": "tablemodel"
+    },
+    "model_version": {
+      "const": "1.0"
+    },
+    "provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "capture_method": {
+          "type": "string"
+        },
+        "captured_at": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "capture_method",
+        "captured_at"
+      ],
+      "type": "object"
+    },
+    "row_header_columns": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "path": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "index",
+          "path"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "rows": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cells": {
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/cell_value"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array"
+          },
+          "index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "labels": {
+            "items": {
+              "$ref": "#/$defs/cell_value"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "index",
+          "labels",
+          "cells"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_fingerprint": {
+      "additionalProperties": false,
+      "properties": {
+        "leaf_column_paths": {
+          "items": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "types": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "leaf_column_paths",
+        "types",
+        "value"
+      ],
+      "type": "object"
+    },
+    "spans": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "col_start": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "colspan": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "row_start": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "rowspan": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "section": {
+            "enum": [
+              "header",
+              "body",
+              "row_header"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "section",
+          "row_start",
+          "col_start",
+          "rowspan",
+          "colspan",
+          "text"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "model_version",
+    "id",
+    "title",
+    "provenance",
+    "schema_fingerprint",
+    "columns",
+    "row_header_columns",
+    "rows",
+    "spans"
+  ],
+  "title": "TableModel",
+  "type": "object"
+}

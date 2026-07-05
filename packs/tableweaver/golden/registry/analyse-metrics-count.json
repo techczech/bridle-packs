@@ -1,0 +1,84 @@
+{
+  "column_frequency": {
+    "Metrics / Count": {
+      "table_count": 2,
+      "table_ids": [
+        "tbl_bcf196d07adc6949",
+        "tbl_simple_archive_metrics"
+      ]
+    },
+    "Metrics / Share": {
+      "table_count": 1,
+      "table_ids": [
+        "tbl_bcf196d07adc6949"
+      ]
+    },
+    "Notes": {
+      "table_count": 1,
+      "table_ids": [
+        "tbl_bcf196d07adc6949"
+      ]
+    },
+    "Status": {
+      "table_count": 1,
+      "table_ids": [
+        "tbl_simple_archive_metrics"
+      ]
+    }
+  },
+  "corpus_stats": {
+    "duplicate_ids": [],
+    "near_duplicate_fingerprints": [],
+    "provenance_breakdown": {
+      "capture-html": 1,
+      "manual-golden": 1
+    },
+    "table_count": 2,
+    "total_leaf_columns": 5,
+    "unique_leaf_columns": 4
+  },
+  "schema_overlap": {
+    "overlapping_columns": [
+      {
+        "shared_columns": [
+          "Metrics / Count"
+        ],
+        "table_ids": [
+          "tbl_bcf196d07adc6949",
+          "tbl_simple_archive_metrics"
+        ]
+      }
+    ],
+    "same_fingerprint": []
+  },
+  "value_distribution": {
+    "Metrics / Count": {
+      "values": {
+        "12": {
+          "count": 1,
+          "table_ids": [
+            "tbl_bcf196d07adc6949"
+          ]
+        },
+        "5": {
+          "count": 1,
+          "table_ids": [
+            "tbl_simple_archive_metrics"
+          ]
+        },
+        "7": {
+          "count": 1,
+          "table_ids": [
+            "tbl_simple_archive_metrics"
+          ]
+        },
+        "Merged metric pending": {
+          "count": 1,
+          "table_ids": [
+            "tbl_bcf196d07adc6949"
+          ]
+        }
+      }
+    }
+  }
+}
