@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "validate": "bun run scripts/validate-packs.ts",
-    "test": "bun test scripts",
+    "test": "bun test scripts && UV_CACHE_DIR=${UV_CACHE_DIR:-/tmp/bridle-packs-uv-cache} UV_PROJECT_ENVIRONMENT=${UV_PROJECT_ENVIRONMENT:-/tmp/bridle-packs-tableweaver-venv} PYTHONPATH=packs/tableweaver/scripts uv run --project packs/tableweaver/envs/table-tools pytest packs/tableweaver/tests",
     "evidence:docling": "bun run scripts/run-docling-evidence.ts"
   },
   "devDependencies": {

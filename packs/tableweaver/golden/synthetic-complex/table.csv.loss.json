@@ -1,0 +1,28 @@
+{
+  "format": "csv",
+  "losses": [
+    {
+      "detail": "rowspan/colspan structure was projected to a rectangular export",
+      "kind": "span"
+    },
+    {
+      "column": 2,
+      "detail": "list items joined with semicolons",
+      "kind": "list_cell",
+      "row": 0
+    },
+    {
+      "column": 1,
+      "detail": "covered span cell exported as empty",
+      "kind": "covered_cell",
+      "row": 1
+    },
+    {
+      "column": 2,
+      "detail": "nested TableModel rendered as plain text summary",
+      "kind": "nested_table",
+      "row": 1
+    }
+  ],
+  "lossless": false
+}

@@ -7,6 +7,7 @@ Packs are builder-side artefacts. A Host App copies a reviewed pack into its app
 ## Packs
 
 - `packs/academic-pdf-to-mkd` — academic PDF to structured Markdown, derived from `~/gitrepos/05_skills/academic-pdf-to-mkd`.
+- `packs/tableweaver` — offline rich TableModel capture, validation, export, and transform tools for structurally complex tables.
 
 ## Validate
 
